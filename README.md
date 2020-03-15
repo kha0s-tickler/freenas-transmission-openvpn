@@ -17,12 +17,18 @@ Go to Shell (FreeNAS one and NOT the jail one) and type in the command below:
 
 Reboot FreeNAS.
 
-# Running the Script
+# Downloading and Running the Script
 After reboot, go into the shell OF YOUR JAIL by clicking on the 3 dot menu next to your jail name (should be transmission) in the list.
 
 Type the following commands:
 
-`cd /media`
+`cp /etc/pkg/FreeBSD.conf /usr/local/etc/pkg/repos/`
+
+`pkg install git`
+
+`git clone https://github.com/kha0s-tickler/freenas-transmission-openvpn.git`
+
+`cd ./freenas-transmission-openvpn`
 
 `sh freenas-transmission-openvpn.sh`
 
