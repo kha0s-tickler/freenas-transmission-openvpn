@@ -1,3 +1,6 @@
+forked from ZeroInfinityXDA/freenas-transmission-openvpn
+Converted script to use VyprVPN instead of PIA
+
 # Setting up Transmission Jail
 Create transmission jail by going to `Plugins > Available > Transmission > Install` and leave DHCP checked, do not touch anything else and press save.
 
