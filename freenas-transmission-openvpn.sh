@@ -48,7 +48,7 @@ echo "
 ipfw -q -f flush
 ipfw -q add 00001 allow all from any to any via lo0
 ipfw -q add 00010 allow all from any to any via tun0
-ipfw -q add 00101 allow all from me to ${ipaddress}/24 uid transmission
+ipfw -q add 00101 allow all from me to ${ipaddress}/22 uid transmission
 ipfw -q add 00102 allow all from ${ipaddress}/22 to me uid transmission
 ipfw -q add 00103 deny all from any to any uid transmission" > /etc/ipfw.rules
 service ipfw start
