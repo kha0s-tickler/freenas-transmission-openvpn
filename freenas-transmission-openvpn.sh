@@ -1,5 +1,6 @@
 #!/bin/bash
 printf "Starting OpenVPN setup for Transmission...\n\n"
+service transmission stop
 printf "Enabling FreeBSD repo...\n\n"
 sed -i '' -e 's/no/yes/' /usr/local/etc/pkg/repos/FreeBSD.conf
 printf "Updating repos...\n\n"
