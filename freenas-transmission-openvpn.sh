@@ -19,6 +19,7 @@ printf "Installing OpenVPN configs...\n\n"
 cd ./config
 wget https://support.goldenfrog.com/hc/article_attachments/360008728172/GF_OpenVPN_10142016.zip
 unzip GF_OpenVPN_10142016.zip
+rm GF_OpenVPN_10142016.zip
 mkdir /usr/local/etc/openvpn/
 printf "\nUsing USA - Los Angeles server!\n\n"
 cp ./config/GF_OpenVPN_10142016/OpenVPN256/USA\ -\ Los\ Angeles.ovpn /usr/local/etc/openvpn/openvpn.conf
