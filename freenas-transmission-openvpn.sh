@@ -14,17 +14,21 @@ openvpn_configfile="/usr/local/etc/openvpn/openvpn.conf"
 firewall_enable="YES"
 firewall_script="/etc/ipfw.rules"' >> /etc/rc.conf
 sed -i '' -e 's/\/usr\/local\/etc\/transmission\/home\/Downloads/\/media/' /etc/rc.conf
-printf "Downloading PIA OpenVPN configs...\n\n"
-mkdir /usr/local/etc/openvpn
-cd /usr/local/etc/openvpn/ || exit
-wget https://www.privateinternetaccess.com/openvpn/openvpn.zip --no-check-certificate
-mkdir PIA 
-unzip openvpn.zip -d PIA/ 
-cd PIA/ || exit 
-printf "\nUsing UK Southampton server!\n\n"
-cp UK\ Southampton.ovpn .. 
-cd .. 
-mv UK\ Southampton.ovpn openvpn.conf
+printf "Installing OpenVPN configs...\n\n"
+cd ./config
+wget https://support.goldenfrog.com/hc/article_attachments/360008728172/GF_OpenVPN_10142016.zip
+unzip GF_OpenVPN_10142016.zip
+mkdir /usr/local/etc/openvpn/
+printf "\nUsing USA - Los Angeles server!\n\n"
+cp ./config/GF_OpenVPN_10142016/OpenVPN256/USA\ -\ Los\ Angeles.ovpn /usr/local/etc/openvpn/openvpn.conf
+#wget https://www.privateinternetaccess.com/openvpn/openvpn.zip --no-check-certificate
+#mkdir PIA 
+#unzip openvpn.zip -d PIA/ 
+#cd PIA/ || exit 
+#printf "\nUsing UK Southampton server!\n\n"
+#cp UK\ Southampton.ovpn .. 
+#cd .. 
+#mv UK\ Southampton.ovpn openvpn.conf
 echo 'Enter username: '
 read -r username
 echo 'Enter password: '
