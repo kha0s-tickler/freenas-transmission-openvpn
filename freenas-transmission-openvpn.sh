@@ -22,7 +22,7 @@ unzip -q GF_OpenVPN_20200320.zip
 rm GF_OpenVPN_20200320.zip
 mkdir /usr/local/etc/openvpn/
 printf "\nUsing USA - Los Angeles server!\n\n"
-cp ./GF_OpenVPN20200320/OpenVPN256/USA\ -\ Los\ Angeles.ovpn /usr/local/etc/openvpn/openvpn.conf
+cp ./GF_OpenVPN_20200320/OpenVPN256/USA\ -\ Los\ Angeles.ovpn /usr/local/etc/openvpn/openvpn.conf
 cd /usr/local/etc/openvpn
 #wget https://www.privateinternetaccess.com/openvpn/openvpn.zip --no-check-certificate
 #mkdir PIA 
