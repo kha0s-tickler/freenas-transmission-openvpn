@@ -1,5 +1,8 @@
 forked from ZeroInfinityXDA/freenas-transmission-openvpn
-Converted script to use VyprVPN instead of PIA
+
+Converted script to use VyprVPN instead of PIA.
+
+This script has been tested and works with FreeNAS-11.3
 
 # Setting up Transmission Jail
 Create transmission jail by going to `Plugins > Available > Transmission > Install` and leave DHCP checked, do not touch anything else and press save.
@@ -27,4 +30,4 @@ Type the following commands:
 `sh freenas-transmission-openvpn.sh`
 
 # Troubleshooting
-If the script ran fine with no errors, but transmission torrents aren't downloading, and `wget http://ipinfo.io/IP -qO -` does not return an ip address, pihole may be interfereing with it if you have one set up. In which case, you need to disable pihole (or whitelist ipinfo.io) and start the entire process from step 1 again.
+If the script ran fine with no errors, but transmission torrents aren't downloading, and `wget http://ipinfo.io/IP -qO -` does not return an ip address, pihole may be interfering with it if you have one set up. In which case, you need to disable pihole (or whitelist ipinfo.io) and start the entire process from step 1 again.
