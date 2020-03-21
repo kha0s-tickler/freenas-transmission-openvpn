@@ -17,9 +17,9 @@ firewall_script="/etc/ipfw.rules"' >> /etc/rc.conf
 sed -i '' -e 's/\/usr\/local\/etc\/transmission\/home\/Downloads/\/media/' /etc/rc.conf
 printf "Installing OpenVPN configs...\n\n"
 cd ./config
-wget https://support.goldenfrog.com/hc/article_attachments/360008728172/GF_OpenVPN_10142016.zip
-unzip -q GF_OpenVPN_10142016.zip
-rm GF_OpenVPN_10142016.zip
+wget https://support.goldenfrog.com/hc/article_attachments/360052616972/GF_OpenVPN_20200320.zip
+unzip -q GF_OpenVPN_20200320.zip
+rm GF_OpenVPN_20200320.zip
 mkdir /usr/local/etc/openvpn/
 printf "\nUsing USA - Los Angeles server!\n\n"
 cp ./OpenVPN256/USA\ -\ Los\ Angeles.ovpn /usr/local/etc/openvpn/openvpn.conf
